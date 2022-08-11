@@ -1,0 +1,52 @@
+nav {
+    position: absolute;
+    top: 0;
+    left: -90%;
+    width: calc(100vw - 33%);
+    background-color: var(--n-white);
+    height: 100vh;
+    animation: menu-in .7s forwards;
+    & button, & ul {
+        margin: 2rem;
+    }
+
+    & ul {
+        & li {
+            list-style-type: none;
+            margin-bottom: 2.5rem;
+            font-weight: 700;
+            font-size: 1.7rem;
+            color: var(--n-very-dark-blue);
+        }
+    }
+}
+
+.backdrop {
+    background-color: var(--n-black);
+    opacity: .75;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: backdrop-in .7s forwards;
+}
+
+@keyframes menu-in {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes backdrop-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .75;
+    }
+}
